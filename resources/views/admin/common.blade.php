@@ -289,86 +289,6 @@
 
                 <div class="menu-inner-shadow"></div>
 
-                <!-- <ul class="menu-inner py-1">
-                    <li class="menu-item {{ request()->is('dashboard*') ? 'active' : '' }}">
-                        <a href="{{ route('dashboard') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-home-smile"></i>
-                            <div data-i18n="Analytics">Dashboard</div>
-                        </a>
-                    </li>
-
-                    <li class="menu-item {{ request()->is('slider*') ? 'active' : '' }}">
-                        <a href="{{ route('slider-list') }}" class="menu-link">
-                            <i class='bxr bx-clipboard-detail menu-icon tf-icons'></i>
-                            <div data-i18n="Analytics">Home Slider</div>
-                        </a>
-                    </li>
-
-                   
-                    <li class="menu-item {{ request()->routeIs('category-*') ? 'active open' : '' }}">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons bx bx-home-smile"></i>
-                            <div data-i18n="Analytics">Category</div>
-                        </a>
-                        <ul class="menu-sub">
-                            <li class="menu-item {{ request()->routeIs('category-list') ? 'active' : '' }}">
-                                <a href="{{ route('category-list') }}" class="menu-link">
-                                    <div data-i18n="Category List">Category List</div>
-                                </a>
-                            </li>
-                            <li
-                                class="menu-item {{ request()->routeIs('category-add-edit') && request()->route('slug') == 'add' ? 'active' : '' }}">
-                                <a href="{{ route('category-add-edit', ['slug' => 'add']) }}" class="menu-link">
-                                    <div data-i18n="Add Category">Add Category</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                   
-                    <li class="menu-item {{ request()->routeIs('product-*') ? 'active open' : '' }}">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons bx bx-home-smile"></i>
-                            <div data-i18n="Analytics">Products</div>
-                        </a>
-                        <ul class="menu-sub">
-                            <li class="menu-item {{ request()->routeIs('product-list') ? 'active' : '' }}">
-                                <a href="{{ route('product-list') }}" class="menu-link">
-                                    <div data-i18n="Product List">Product List</div>
-                                </a>
-                            </li>
-                            <li
-                                class="menu-item {{ request()->routeIs('product-add-edit') && request()->route('slug') == 'add' ? 'active' : '' }}">
-                                <a href="{{ route('product-add-edit', ['slug' => 'add']) }}" class="menu-link">
-                                    <div data-i18n="Add Product">Add Product</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                   
-
-                    <li class="menu-item {{ request()->is('surgeon-corner*') ? 'active' : '' }}">
-                        <a href="{{ route('surgeon-corner-list') }}" class="menu-link">
-                            <i class='bxr bx-star menu-icon tf-icons'></i>
-                            <div data-i18n="Analytics">Surgeon Corner</div>
-                        </a>
-                    </li>
-
-                    <li class="menu-item {{ request()->is('quality*') ? 'active' : '' }}">
-                        <a href="{{ route('quality-list') }}" class="menu-link">
-                            <i class='bxr bx-shield-check menu-icon tf-icons'></i>
-                            <div data-i18n="Analytics">Quality</div>
-                        </a>
-                    </li>
-
-                    <li class="menu-item {{ request()->is('contact*') ? 'active' : '' }}">
-                        <a href="{{ route('contact') }}" class="menu-link">
-                            <i class='bxr bx-clipboard-detail menu-icon tf-icons'></i>
-                            <div data-i18n="Analytics">Contact</div>
-                        </a>
-                    </li>
-
-                    
-                </ul> -->
                 <ul class="menu-inner py-1">
                     <li class="menu-item {{ request()->is('dashboard*') ? 'active' : '' }}">
                         <a href="{{ route('dashboard') }}" class="menu-link">
@@ -384,49 +304,22 @@
                         </a>
                     </li>
 
-                    <!-- Category Dropdown -->
-                    <li class="menu-item {{ request()->routeIs('category-*') ? 'active open' : '' }}">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons bx bx-category"></i>
+
+                    <li class="menu-item {{ request()->is('category*') ? 'active' : '' }}">
+                        <a href="{{ route('category-list') }}" class="menu-link">
+                            <i class='menu-icon tf-icons bx bx-category'></i>
                             <div data-i18n="Analytics">Category</div>
                         </a>
-                        <ul class="menu-sub">
-                            <li class="menu-item {{ request()->routeIs('category-list') ? 'active' : '' }}">
-                                <a href="{{ route('category-list') }}" class="menu-link">
-                                    <div data-i18n="Category List">Category List</div>
-                                </a>
-                            </li>
-                            <li
-                                class="menu-item {{ request()->routeIs('category-add-edit') && request()->route('slug') == 'add' ? 'active' : '' }}">
-                                <a href="{{ route('category-add-edit', ['slug' => 'add']) }}" class="menu-link">
-                                    <div data-i18n="Add Category">Add Category</div>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
-                    <!-- / Category Dropdown -->
 
-                    <!-- Products Dropdown -->
-                    <li class="menu-item {{ request()->routeIs('product-*') ? 'active open' : '' }}">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons bx bx-package"></i>
+
+                    <li class="menu-item {{ request()->is('product*') ? 'active' : '' }}">
+                        <a href="{{ route('product-list') }}" class="menu-link">
+                            <i class='menu-icon tf-icons bx bx-package'></i>
                             <div data-i18n="Analytics">Products</div>
                         </a>
-                        <ul class="menu-sub">
-                            <li class="menu-item {{ request()->routeIs('product-list') ? 'active' : '' }}">
-                                <a href="{{ route('product-list') }}" class="menu-link">
-                                    <div data-i18n="Product List">Product List</div>
-                                </a>
-                            </li>
-                            <li
-                                class="menu-item {{ request()->routeIs('product-add-edit') && request()->route('slug') == 'add' ? 'active' : '' }}">
-                                <a href="{{ route('product-add-edit', ['slug' => 'add']) }}" class="menu-link">
-                                    <div data-i18n="Add Product">Add Product</div>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
-                    <!-- / Products Dropdown -->
+
 
                     <li class="menu-item {{ request()->is('surgeon-corner*') ? 'active' : '' }}">
                         <a href="{{ route('surgeon-corner-list') }}" class="menu-link">
@@ -449,7 +342,16 @@
                         </a>
                     </li>
 
-                    <!-- Layouts -->
+                    <!-- Logout Button directly below Contact -->
+                    <li class="menu-item">
+                        <a href="{{ route('logout') }}" class="menu-link " onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <i class='menu-icon tf-icons bx bx-power-off'></i>
+                            <div class="fw-semibold">Log Out</div>
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>
                 </ul>
 
             </aside>
@@ -459,7 +361,7 @@
             <div class="layout-page">
                 <!-- Navbar -->
 
-                <nav class="layout-navbar  navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+                <nav class="layout-navbar navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
                     id="layout-navbar">
                     <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
                         <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
@@ -467,16 +369,16 @@
                         </a>
                     </div>
 
-                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-                        <!-- Search -->
+                    <div class="navbar-nav-right d-flex align-items-center justify-content-between w-100" id="navbar-collapse">
+                        <!-- Welcome Admin Message -->
                         <div class="navbar-nav align-items-center">
                             <div class="nav-item d-flex align-items-center">
+                                <span class="fw-bold fs-5 text-dark">Welcome <span style="color: var(--theme-color-dark);">Admin</span></span>
                             </div>
                         </div>
-                        <!-- /Search -->
 
-                        <!-- Live Date & Time — Asia/Kolkata (IST) -->
-                        <div class="navbar-nav align-items-center ms-auto ms-xl-0 me-3">
+                        <div class="d-flex align-items-center ms-auto gap-3">
+                            <!-- Live Date & Time — Asia/Kolkata (IST) -->
                             <div class="navbar-datetime">
                                 <i class='bx bx-calendar'></i>
                                 <span id="liveDate">--</span>
@@ -485,53 +387,13 @@
                                 <span id="liveTime">--:--:--</span>
                                 <span class="dt-tz">IST</span>
                             </div>
+
+                            <!-- Logged-in User Name (Replaces avatar image) -->
+                            <div class="user-name-display d-flex align-items-center gap-2 px-3 py-2 rounded-pill bg-light border ms-2">
+                                <i class='bx bx-user-circle fs-4' style="color: var(--theme-color);"></i>
+                                <span class="fw-semibold text-dark text-capitalize">{{ Auth::user()->name ?? 'Admin' }}</span>
+                            </div>
                         </div>
-
-                        <ul class="navbar-nav flex-row align-items-center ms-auto ms-xl-3 text-end">
-                            <!-- User -->
-                            <li class="nav-item navbar-dropdown dropdown-user dropdown" style="margin-left: 1080px;">
-                                <a class="nav-link dropdown-toggle hide-arrow" href="#" data-bs-toggle="dropdown">
-                                    <div class="avatar avatar-online">
-                                        <img src="{{ asset('admin_css/assets/img/avatars/1.png') }}" alt
-                                            class="w-px-40 h-auto rounded-circle" />
-                                    </div>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            <div class="d-flex">
-                                                <div class="flex-shrink-0 me-3">
-                                                    <div class="avatar avatar-online">
-                                                        <img src="{{ asset('admin_css/assets/img/avatars/1.png') }}" alt
-                                                            class="w-px-40 h-auto rounded-circle" />
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <span class="fw-semibold d-block">{{ Auth::user()->name }}</span>
-                                                </div>
-
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-divider"></div>
-                                    </li>
-
-                                    <li>
-                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            <i class="bx bx-power-off me-2"></i>
-                                            <span class="align-middle">Log Out</span>
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                                class="d-none">
-                                                @csrf
-                                            </form>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!--/ User -->
-                        </ul>
                     </div>
                 </nav>
 

@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\HomeSlider;
 use App\Models\Product;
+use App\Models\Quality;
+use App\Models\SurgeonCornerReview;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -86,6 +89,9 @@ class AuthController extends Controller
 
         $data['categoryCount'] = Category::count();
         $data['productCount'] = Product::count();
+        $data['surgeonCornerCount'] = SurgeonCornerReview::count();
+        $data['qualityCount'] = Quality::count();
+        $data['sliderCount'] = HomeSlider::count();
         return view('admin.dashboard', $data);
     }
 

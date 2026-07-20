@@ -74,3 +74,4 @@ class CategoryController extends Controller
             ->with('success', 'Category Deleted Successfully');
     }
 }
+ 

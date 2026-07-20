@@ -47,14 +47,14 @@ Route::get('/lang/{locale}', function ($locale) {
 
 Route::middleware('guest')->group(function () {
 
-    Route::get('admin/login', function () {
+    Route::get('login', function () {
         return view('auth.login');
     });
     Route::get('/register', [AuthController::class, 'showRegister'])
         ->name('register');
     Route::post('/register', [AuthController::class, 'register']);
 
-    Route::get('admin/login', [AuthController::class, 'showLogin'])
+    Route::get('login', [AuthController::class, 'showLogin'])
         ->name('login');
 
     Route::post('/loginSubmit', [AuthController::class, 'login']);
@@ -109,3 +109,8 @@ Route::middleware('auth')->group(function () {
     Route::get('quality-delete/{id}', [QualityController::class, 'qualityDelete'])->name('quality-delete');
 
 });
+
+Route::fallback(function () {
+    return response()->view('errors.404', [], 404);
+});
+

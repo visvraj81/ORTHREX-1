@@ -156,12 +156,8 @@
                                         </span>
                                     @enderror
 
-                                </div>
-
-                                {{-- Preview --}}
-                                <div class=" col-md-6 mt-3">
-
-                                    <div class="upload-box">
+                                    {{-- Preview --}}
+                                    <div class="upload-box mt-3">
 
                                         <div class="preview-title">
                                             Preview
@@ -249,9 +245,9 @@
             if (fileType.startsWith('image/')) {
 
                 previewContainer.innerHTML = `
-                    <img src="${fileURL}"
-                         class="store_img_view">
-                `;
+                        <img src="${fileURL}"
+                             class="store_img_view">
+                    `;
 
             }
 
@@ -259,10 +255,10 @@
             else if (fileType.startsWith('video/')) {
 
                 previewContainer.innerHTML = `
-                    <video controls class="video_preview">
-                        <source src="${fileURL}">
-                    </video>
-                `;
+                        <video controls class="video_preview">
+                            <source src="${fileURL}">
+                        </video>
+                    `;
 
             }
 
