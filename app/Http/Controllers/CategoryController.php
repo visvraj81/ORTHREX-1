@@ -39,9 +39,9 @@ class CategoryController extends Controller
             $data = new Category();
             $data->title = $request->title;
             $data->banner_subtitle = $request->banner_subtitle;
-        $data->banner_description = $request->banner_description;
-        $data->section_title = $request->section_title;
-        $data->section_description = $request->section_description;
+            $data->banner_description = $request->banner_description;
+            $data->section_title = $request->section_title;
+            $data->section_description = $request->section_description;
             $data->save();
 
             return redirect()->route('category-list')
@@ -51,10 +51,10 @@ class CategoryController extends Controller
 
             $data = Category::find($id);
             $data->title = $request->title;
-               $data->banner_subtitle = $request->banner_subtitle;
-        $data->banner_description = $request->banner_description;
-        $data->section_title = $request->section_title;
-        $data->section_description = $request->section_description;
+            $data->banner_subtitle = $request->banner_subtitle;
+            $data->banner_description = $request->banner_description;
+            $data->section_title = $request->section_title;
+            $data->section_description = $request->section_description;
             $data->save();
 
             return redirect()->route('category-list')
